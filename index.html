@@ -81,15 +81,15 @@
       }
 
       var buildUrl = "Build";
-      var loaderUrl = buildUrl + "/FlappyBotDev.loader.js";
+      var loaderUrl = buildUrl + "/FlappyBot.loader.js";
       var config = {
-        dataUrl: buildUrl + "/FlappyBotDev.data.unityweb",
-        frameworkUrl: buildUrl + "/FlappyBotDev.framework.js.unityweb",
-        codeUrl: buildUrl + "/FlappyBotDev.wasm.unityweb",
+        dataUrl: buildUrl + "/FlappyBot.data.unityweb",
+        frameworkUrl: buildUrl + "/FlappyBot.framework.js.unityweb",
+        codeUrl: buildUrl + "/FlappyBot.wasm.unityweb",
         streamingAssetsUrl: "StreamingAssets",
         companyName: "DonutBox",
         productName: "FlappyBot",
-        productVersion: "1.2.2",
+        productVersion: "2",
         showBanner: unityShowBanner,
       };
 
@@ -108,7 +108,7 @@
         document.getElementsByTagName('head')[0].appendChild(meta);
       }
 
-      canvas.style.background = "url('" + buildUrl + "/FlappyBotDev.jpg') center / cover";
+      canvas.style.background = "url('" + buildUrl + "/FlappyBot.jpg') center / cover";
       loadingBar.style.display = "block";
 
 
