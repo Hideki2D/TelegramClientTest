@@ -8,23 +8,21 @@
     <link rel="stylesheet" href="TemplateData/style.css">
     <link rel="manifest" href="manifest.webmanifest">
     <script src="https://telegram.org/js/telegram-web-app.js"></script>
+	<script src="https://sad.adsgram.ai/js/sad.min.js"></script>
     <script>
 
         window.onload = function () {
+			
             if (window && window.Telegram && window.Telegram.WebApp) {
 
                 window.Telegram.WebApp.expand();
 
                 window.Telegram.WebApp.ready();
-				
-				<!-- window.Telegram.WebApp.onEvent('invoiceClosed', function(object) { -->
-				  <!-- if (object.status == 'paid') { -->
-					<!-- gameInstance.SendMessage('IAPController', 'Paid', id); -->
-				  <!-- } else if (object.status == 'failed') { -->
-					<!-- gameInstance.SendMessage('IAPController', 'Fail', object.status); -->
-				  <!-- } -->
-				<!-- }); -->
             }
+			
+			const RewardedAd = window.Adsgram.init({ blockId: "445" });
+
+			console.log('rewarded inited');
         };
 
 
@@ -89,7 +87,7 @@
         streamingAssetsUrl: "StreamingAssets",
         companyName: "DonutBox",
         productName: "FlappyBot",
-        productVersion: "51",
+        productVersion: "56",
         showBanner: unityShowBanner,
       };
 
@@ -135,37 +133,15 @@
           alert(message);
         });
       };
-        document.body.appendChild(script);
-		
-		<!-- document.body.height = 'auto', -->
-		<!-- document.documentElement.clientHeight = 'auto'; -->
-		<!-- document.documentElement.style.overflow = 'hidden'; -->
+        document.body.appendChild(script);		
 		
 		const overflow = 5
-		document.body.style.overflowY = 'hidden'
-		//document.body.style.marginTop = `${overflow}px`
-		document.body.style.height = window.innerHeight + overflow + "px"
-		//document.body.style.paddingBottom = `${overflow}px`
-		window.scrollTo(0, overflow);
 		
-		<!-- var ts = null; -->
-		<!-- const onTouchStart = (e) => { -->
-		  <!-- ts = e.touches[0].clientY -->
-		<!-- } -->
-		<!-- const onTouchMove = (e) => { -->
-		  <!-- if (scrollableEl) { -->
-			<!-- const scroll = scrollableEl.scrollTop -->
-			<!-- const te = e.changedTouches[0].clientY -->
-			<!-- if (scroll <= 0 && ts != null && ts < te) { -->
-			  <!-- e.preventDefault() -->
-			<!-- } -->
-		  <!-- } else { -->
-			<!-- e.preventDefault() -->
-		  <!-- } -->
-		<!-- } -->
-		<!-- document.documentElement.addEventListener('touchstart', onTouchStart, { passive: false }) -->
-		<!-- document.documentElement.addEventListener('touchmove', onTouchMove, { passive: false }) -->
-
+		document.body.style.overflowY = 'hidden'
+		
+		document.body.style.height = window.innerHeight + overflow + "px"
+		
+		window.scrollTo(0, overflow);	
     </script>
 </body>
 </html>
