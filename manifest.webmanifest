@@ -1,9 +1,9 @@
 {
-    "name": "FlappyBot",
-    "short_name": "FlappyBot",
+    "name": "FlappyDonutRebased",
+    "short_name": "FlappyDonutRebased",
     "start_url": "index.html",
     "display": "fullscreen",
-    "background_color": "#FFFFFF",
+    "background_color": "#231F20",
     "theme_color": "#000",
     "description": "",
     "icons": [{
